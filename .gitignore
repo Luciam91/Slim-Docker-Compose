@@ -1,0 +1,5 @@
+/vendor/
+/logs/*
+/var/*
+.idea/*
+composer.lock
