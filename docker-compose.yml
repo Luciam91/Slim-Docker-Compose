@@ -20,6 +20,8 @@ services:
     networks:
       - public
       - private
+    links:
+      - mysql:mysql
 
   mysql:
     image: mysql:5.7
@@ -27,3 +29,5 @@ services:
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
       MYSQL_PASSWORD: password
       MYSQL_USER: mysql
+    networks:
+      - private
