@@ -14,5 +14,23 @@ return [
             'name' => 'slim-app',
             'path' => __DIR__ . '/../logs/app.log',
         ],
+        'doctrine' => [
+            'meta' => [
+                'entity_path' => [
+                    __DIR__ . '/../config/doctrine'
+                ],
+                'auto_generate_proxies' => true,
+                'proxy_dir' =>  __DIR__.'/../cache/proxies',
+                'cache' => null,
+            ],
+            'connection' => [
+                'driver'   => 'pdo_mysql',
+                'host'     => 'mysql',
+                'dbname'   => 'slim',
+                'user'     => 'dbuser',
+                'password' => 'password',
+                'port' => 3306
+            ]
+        ]
     ],
 ];

@@ -21,3 +21,15 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], Monolog\Logger::DEBUG));
     return $logger;
 };
+
+
+$container['em'] = function ($c) {
+    $settings = $c->get('settings');
+    $config = \Doctrine\ORM\Tools\Setup::createXMLMetadataConfiguration(
+        $settings['doctrine']['meta']['entity_path'],
+        $settings['doctrine']['meta']['auto_generate_proxies'],
+        $settings['doctrine']['meta']['proxy_dir'],
+        $settings['doctrine']['meta']['cache']
+    );
+    return \Doctrine\ORM\EntityManager::create($settings['doctrine']['connection'], $config);
+};
