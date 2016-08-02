@@ -30,3 +30,8 @@ services:
     networks:
       - public
       - private
+
+  redis:
+    image: redis:3.2-alpine
+    networks:
+      - private

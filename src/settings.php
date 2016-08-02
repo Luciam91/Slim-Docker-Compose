@@ -31,6 +31,12 @@ return [
                 'password' => 'password',
                 'port' => 3306
             ]
+        ],
+        'redis' => [
+            'connection' => [
+                'host' => 'redis',
+                'port' => 6379
+            ]
         ]
     ],
 ];
