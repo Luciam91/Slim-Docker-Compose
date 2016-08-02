@@ -33,3 +33,12 @@ $container['em'] = function ($c) {
     );
     return \Doctrine\ORM\EntityManager::create($settings['doctrine']['connection'], $config);
 };
+
+$container['redis'] = function($c) {
+    $settings = $c->get('settings')['redis'];
+    $redis = new \Predis\Client(
+        $settings['connection']
+    );
+
+    return $redis;
+};
