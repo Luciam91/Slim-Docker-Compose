@@ -6,7 +6,7 @@
 
     <entity name="Application\Entities\User" table="users">
 
-        <id name="id" type="guid" column="id">
+        <id name="identifier" type="guid">
             <generator strategy="UUID"/>
         </id>
 
