@@ -7,5 +7,5 @@ Note: If you choose to keep the MySQL container you should start it first using 
 Further updates will follow including:
 
 - Adding a database container (MySQL / Postgres) - MySQL Container Added (2/8/2016)
-- Adding a caching layer (Memcached/Redis)
+- Adding a caching layer (Memcached/Redis) - Redis container added (2/8/2016)
 - Environment specific config files
