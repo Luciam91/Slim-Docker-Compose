@@ -13,23 +13,20 @@ services:
     volumes:
       - ./opt/apache2/development/apache2.conf:/etc/apache2/apache2.conf
       - ./opt/apache2/development/virtual-host.conf:/etc/apache2/sites-enabled/000-default.conf
-      - ./opt/php/development:/usr/local/etc/php/conf.d
       - ./:/var/www
     ports:
       - 10000:80
     networks:
       - public
       - private
-    links:
-      - mysql:mysql
-    depends_on:
-      - mysql
 
   mysql:
     image: mysql:5.7
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: "true"
       MYSQL_PASSWORD: password
-      MYSQL_USER: mysql
+      MYSQL_USER: dbuser
+      MYSQL_DATABASE: slim
     networks:
+      - public
       - private

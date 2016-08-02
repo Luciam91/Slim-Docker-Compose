@@ -27,8 +27,9 @@ return [
                 'driver'   => 'pdo_mysql',
                 'host'     => 'mysql',
                 'dbname'   => 'slim',
-                'user'     => 'mysql',
+                'user'     => 'dbuser',
                 'password' => 'password',
+                'port' => 3306
             ]
         ]
     ],
