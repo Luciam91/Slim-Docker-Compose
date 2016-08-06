@@ -15,7 +15,6 @@ session_start();
 
 // Instantiate the app
 $settings = require __DIR__ . '/../config/' . getenv("SLIM_ENVIRONMENT") .'/settings.php';
-print_r($settings);
 $app = new \Slim\App($settings);
 
 // Set up dependencies
