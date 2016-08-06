@@ -1,4 +1,5 @@
 <?php
+
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
@@ -20,21 +21,21 @@ return [
                     __DIR__ . '/../config/doctrine'
                 ],
                 'auto_generate_proxies' => true,
-                'proxy_dir' =>  __DIR__.'/../cache/proxies',
+                'proxy_dir' => __DIR__ . '/../cache/proxies',
                 'cache' => null,
             ],
             'connection' => [
-                'driver'   => 'pdo_mysql',
-                'host'     => 'mysql',
-                'dbname'   => 'slim',
-                'user'     => 'dbuser',
+                'driver' => 'pdo_mysql',
+                'host' => 'mysql',
+                'dbname' => 'slim',
+                'user' => 'dbuser',
                 'password' => 'password',
                 'port' => 3306
             ]
         ],
         'redis' => [
             'connection' => [
-                'host' => 'redis',
+                'host' => 'localhost',
                 'port' => 6379
             ]
         ]
