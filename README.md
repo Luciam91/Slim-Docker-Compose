@@ -8,4 +8,4 @@ Further updates will follow including:
 
 - Adding a database container (MySQL / Postgres) - MySQL Container Added (2/8/2016)
 - Adding a caching layer (Memcached/Redis) - Redis container added (2/8/2016)
-- Environment specific config files
+- Environment specific config files - Environments added (6/8/2016)
