@@ -18,7 +18,7 @@ $settings = require __DIR__ . '/../config/' . getenv("SLIM_ENVIRONMENT") .'/sett
 $app = new \Slim\App($settings);
 
 // Set up dependencies
-require __DIR__ . '/../src/dependencies.php';
+require __DIR__ . '/../config/' . getenv("SLIM_ENVIRONMENT") . '/dependencies.php';
 
 // Register middleware
 require __DIR__ . '/../src/middleware.php';
