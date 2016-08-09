@@ -1,11 +1,22 @@
 # Slim Framework 3 Skeleton with Docker-Compose
 
-Don't want to run Slim with the internal web server? Now you can run it with Docker! Just ensure you have docker-compose installed, clone the project and do a `docker-compose up` and you're ready to go!
+This is a simple skeleton application for the Slim3 Framework with support for Doctrine, Redis and environment aware config from the get-go.
 
-Note: If you choose to keep the MySQL container you should start it first using `docker-compose up -d database` and waiting 10-20 seconds before running `docker-compose up`
+## Getting Started
 
-Further updates will follow including:
+To get started create a new project using Composer
 
-- Adding a database container (MySQL / Postgres) - MySQL Container Added (2/8/2016)
-- Adding a caching layer (Memcached/Redis) - Redis container added (2/8/2016)
-- Environment specific config files - Environments added (6/8/2016)
+`composer create-project luciam91/slim3-skeleton PROJECT`
+
+Your project will now be set up in the PROJECT directory specified in the above command.
+
+## Docker
+
+For your convenience I have provided a sample docker-compose file for development, ensure you have Docker installed and run the following commands to get a development environment running on your localhost
+
+```shell
+docker-compose up -d database; sleep 30
+docker-compose up
+```
+
+This will create and provision the database container first and then create an application container.
