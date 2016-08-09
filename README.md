@@ -6,7 +6,7 @@ This is a simple skeleton application for the Slim3 Framework with support for D
 
 To get started create a new project using Composer
 
-`composer create-project luciam91/slim3-skeleton PROJECT`
+`composer create-project luciam91/slim3-skeleton PROJECT -s dev`
 
 Your project will now be set up in the PROJECT directory specified in the above command.
 
